@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>490</w>
+      <h>870</h>
+    </coordinates>
+    <panel_attributes>::GamePanel
+--
+~SCREEN_WIDTH = 600: int
+~SCREEN_HEIGHT = 600: int
+~UNIT_SIZE = 15: int
+~GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT) / UNIT_SIZE: int
+~DELAY = 80: int
+~WALL_NUMBER = 15: int
+~wallx[] = new int[WALL_NUMBER]: int
+~wally[] = new int[WALL_NUMBER]: int
+~x[] = new int[GAME_UNITS]: int
+~y[] = new int[GAME_UNITS]: int
+~AIx[] = new int[GAME_UNITS]: int
+~AIy[] = new int[GAME_UNITS]: int
+~APPLE_NUMBER = 2: int
+~appleX[] = new int[APPLE_NUMBER]: int
+~appleY[] = new int[APPLE_NUMBER]: int
+~TOAD_SPEED = 4: int
+~toadX: int
+~toadY: int
+~probtoadX: int
+~probtoadY: int
+~toadmoverate = 1: int
+~location: int
+~direction = 'R': char
+~AIdirection = 'L': char
+~AIbodyParts = 6: int
+~bodyParts = 6: int
+~applesEaten: int
+~AIeaten: int
+~running = false: boolean
+~timer: Timer
+~random: Random
+--
+~GamePanel(): ctor
++getRandomNumber(int min, int max): int
++startGame(): void
++paintComponent(Graphics g): void
++draw(Graphics g): void
++newApple(int i): void
++newToad(): void
++move(): void
++AImove(): void
++checkApple(): void
++checkToad(): void
++nextToadStep(): void
++moveToad(): void
++checkCollisions(): void
++gameOver(Graphics g): void
+-pathFinder(): void
++actionPerformed(ActionEvent e): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
